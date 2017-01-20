@@ -1,4 +1,3 @@
-# Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,23 +19,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from oneplus2 device
 $(call inherit-product, device/oneplus/oneplus2/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common XOSP stuff.
+$(call inherit-product, vendor/xosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/xosp/config/xosp.mk)
 
-PRODUCT_NAME := lineage_oneplus2
+
+PRODUCT_NAME := xosp_oneplus2
 PRODUCT_DEVICE := oneplus2
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
+PRODUCT_MODEL := OnePlus 2
+IS_ARM64 := TRUE
+RELEASE_TYPE := XOSP_OFFICIAL
 
-PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 TARGET_VENDOR_PRODUCT_NAME := OnePlus2
 TARGET_VENDOR_DEVICE_NAME := OnePlus2
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=OnePlus2 PRODUCT_NAME=OnePlus2
+PRODUCT_BUILD_PROP_OVERRIDES += OnePlus 2
+TARGET_DEVICE=OnePlus2 PRODUCT_NAME=OnePlus2
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=OnePlus/OnePlus2/OnePlus2:6.0.1/MMB29M/1447840920:user/release-keys \
-    PRIVATE_BUILD_DESC="OnePlus2-user 6.0.1 MMB29M 20 dev-keys"
+    PRIVATE_BUILD_DESC="OnePlus2-user 6.0.1 MMB29M 31 dev-keys"
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
