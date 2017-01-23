@@ -236,10 +236,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/telephony/telephony-ext.jar:system/framework/telephony-ext.jar
 
 # Sensors
 PRODUCT_PACKAGES += \
